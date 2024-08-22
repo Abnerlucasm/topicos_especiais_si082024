@@ -5,6 +5,23 @@
 # número aleatório entre 1 e 6, importe o seguinte pacote import random para utilizar a
 # classe random.
 
+import random
+
+tentativas = 0
+soma = 0
+
+while soma != 7 and soma != 11:
+    
+    dadoA = random.randint(1, 6)
+    dadoB = random.randint(1, 6)
+    
+    soma = dadoA + dadoB
+    
+    tentativas += 1
+    
+    print(f"Tentativa {tentativas}: dadoA = {dadoA}, dadoB = {dadoB}, soma = {soma}")
+
+print(f"Foi necessário {tentativas} tentativas para alcançar uma soma de {soma}.")
 
 # 8) Dado o dicionário valores = {"a": 10, "b": 20, "c": 30} , some todos os valores e
 # exiba o total.
