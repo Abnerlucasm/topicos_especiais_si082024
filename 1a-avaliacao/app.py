@@ -264,4 +264,31 @@ print(total_vogais)
 # Deve ser impresso a lista das notas classificadas e qual usuário possui essa
 # classificação de nota.
 
-#!!! Falta fazer
+
+estudantes = {
+    'Alice': 95,
+    'Bob': 82,
+    'Charlie': 73,
+    'David': 60,
+    'Eva': 47,
+    'Frank': 55
+}
+
+def classificar_nota(nota):
+    if 90 <= nota <= 100:
+        return 'A'
+    elif 80 <= nota <= 89:
+        return 'B'
+    elif 70 <= nota <= 79:
+        return 'C'
+    elif 60 <= nota <= 69:
+        return 'D'
+    elif 50 <= nota <= 59:
+        return 'E'
+    else:
+        return 'F'
+
+classificacoes = {estudante: classificar_nota(nota) for estudante, nota in estudantes.items()}
+
+for estudante, classificacao in classificacoes.items():
+    print(f"{estudante} obteve uma nota classificada como: {classificacao}")
